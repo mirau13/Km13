@@ -8,18 +8,13 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<!-- Css and js for availability calendar -->
-		<link rel="stylesheet" href="assets/style.css">
-		<link rel="stylesheet" href="assets/dateTimePicker.css">
-		<script type="text/javascript" src="scripts/components/jquery.min.js"></script>
-		<script type="text/javascript" src="scripts/dateTimePicker.min.js"></script>
+		
 	</head>
 	<body>
-
 		<!-- Wrapper -->
 			<div id="wrapper">
-
-				<!-- Header -->
+				<!-- Header -->						
+							
 					<header id="header">
 						<div class="logo">
 							<span class="icon fa-diamond"></span>
@@ -73,7 +68,148 @@
 								<br/>
 		
 									<h4>Verifică disponibilitatea:</h4>
-									<div id="basic" data-toggle="calendar" data-month="10" data-year="2017" ></div>
+										<fieldset class="date"> 
+											<legend>Data check-in </legend> 
+											  <label for="day_start">Zi</label> 
+  <select id="day_start" 
+          name="day_start" /> 
+    <option>1</option>       
+    <option>2</option>       
+    <option>3</option>       
+    <option>4</option>       
+    <option>5</option>       
+    <option>6</option>       
+    <option>7</option>       
+    <option>8</option>       
+    <option>9</option>       
+    <option>10</option>       
+    <option>11</option>       
+    <option>12</option>       
+    <option>13</option>       
+    <option>14</option>       
+    <option>15</option>       
+    <option>16</option>       
+    <option>17</option>       
+    <option>18</option>       
+    <option>19</option>       
+    <option>20</option>       
+    <option>21</option>       
+    <option>22</option>       
+    <option>23</option>       
+    <option>24</option>       
+    <option>25</option>       
+    <option>26</option>       
+    <option>27</option>       
+    <option>28</option>       
+    <option>29</option>       
+    <option>30</option>       
+    <option>31</option>       
+  </select>-
+  <label for="month_start">Luna</label> 
+  <select id="month_start" 
+          name="month_start" /> 
+    <option>January</option>       
+    <option>February</option>       
+    <option>March</option>       
+    <option>April</option>       
+    <option>May</option>       
+    <option>June</option>       
+    <option>July</option>       
+    <option>August</option>       
+    <option>September</option>       
+    <option>October</option>       
+    <option>November</option>       
+    <option>December</option>       
+  </select> - 
+  <label for="year_start">An</label> 
+  <select id="year_start" 
+         name="year_start" /> 
+    <option>2018</option>       
+    <option>2019</option>    
+	<option>2020</option> 	
+    <option>2021</option>       
+    <option>2022</option>       
+    <option>2023</option>       
+    <option>2024</option>       
+    <option>2025</option>       
+    <option>2026</option>       
+    <option>2027</option>       
+    <option>2028</option>       
+  </select> 
+  <span class="inst">(Zi-Luna-An)</span> 
+</fieldset> 
+
+<fieldset class="date"> 
+  <legend>Data check-out </legend> 
+    <label for="day_end">Zi</label> 
+  <select id="day_end" 
+          name="day_end" /> 
+    <option>1</option>       
+    <option>2</option>       
+    <option>3</option>       
+    <option>4</option>       
+    <option>5</option>       
+    <option>6</option>       
+    <option>7</option>       
+    <option>8</option>       
+    <option>9</option>       
+    <option>10</option>       
+    <option>11</option>       
+    <option>12</option>       
+    <option>13</option>       
+    <option>14</option>       
+    <option>15</option>       
+    <option>16</option>       
+    <option>17</option>       
+    <option>18</option>       
+    <option>19</option>       
+    <option>20</option>       
+    <option>21</option>       
+    <option>22</option>       
+    <option>23</option>       
+    <option>24</option>       
+    <option>25</option>       
+    <option>26</option>       
+    <option>27</option>       
+    <option>28</option>       
+    <option>29</option>       
+    <option>30</option>       
+    <option>31</option>       
+  </select> -
+  <label for="month_end">Luna</label> 
+  <select id="month_end" 
+          name="month_end" /> 
+    <option>January</option>       
+    <option>February</option>       
+    <option>March</option>       
+    <option>April</option>       
+    <option>May</option>       
+    <option>June</option>       
+    <option>July</option>       
+    <option>August</option>       
+    <option>September</option>       
+    <option>October</option>       
+    <option>November</option>       
+    <option>December</option>       
+  </select> -  
+  <label for="year_end">An</label> 
+  <select id="year_end" 
+         name="year_end" /> 
+    <option>2018</option>       
+    <option>2019</option>    
+	<option>2020</option> 	
+    <option>2021</option>       
+    <option>2022</option>       
+    <option>2023</option>       
+    <option>2024</option>       
+    <option>2025</option>       
+    <option>2026</option>       
+    <option>2027</option>       
+    <option>2028</option>        
+  </select> 
+  <span class="inst">(Zi-Luna-An)</span> 
+</fieldset> 
+									
 							</article>
 
 						<!-- Work -->
@@ -92,8 +228,8 @@
 							</article>
 
 						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
+							<article id="contact">						
+								<h2 class="major">Contact</h2>								
 								<form method="post" action="#">
 									<div class="field half first">
 										<label for="name">Name</label>
@@ -380,11 +516,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
-			<script type="text/javascript">
-				$(document).ready(function()
-				{
-					$('#basic').calendar();
-				}
-			</script>
+		
 	</body>
 </html>
