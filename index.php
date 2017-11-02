@@ -1,5 +1,5 @@
+<?php include('signup-inc.php'); ?>
 <!DOCTYPE HTML>
-
 <html>
 	<head>
 		<title>Cabana Km 13</title>
@@ -11,6 +11,7 @@
 		
 	</head>
 	<body>
+	
 		<!-- Wrapper -->
 			<div id="wrapper">
 				<!-- Header -->						
@@ -36,6 +37,26 @@
 							</ul>
 						</nav>
 					</header>
+		<div>
+		<input type="button" value="Înregistrare" onclick="window.location.href='inregistrare.php'" />
+		<input type="button" value="Logare" onclick="window.location.href='login.php'" />
+		</div>
+		<div class="content">
+			<?php if (isset($_SESSION['success'])): ?>
+				<div class="error success">
+					<h3>
+						<?php
+							echo $_SESSION['success'];
+							unset($_SESSION['success']);
+						?>
+					</h3>
+				</div>
+			<?php endif ?>
+
+			<?php if (isset($_SESSION)): ?>
+				<p><a href="index.php?logout='1'" style="color: red;">Delogare</a></p>
+			<?php endif ?>
+		</div>
 
 				<!-- Main -->
 					<div id="main">
