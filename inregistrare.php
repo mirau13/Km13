@@ -37,6 +37,9 @@
 		<div class="input-group">
 			<button type="submit" name="submit" class="btn">Înregistrare</button>
 		</div>
+		<div class="input-group">
+		<input type="button" value="Home" onclick="window.location.href='index.php'" />
+		</div>
 	</form>
 
 </body>

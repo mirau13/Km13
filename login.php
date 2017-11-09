@@ -24,6 +24,9 @@
 		<div class="input-group">
 			<button type="submit" name="login" class="btn">Logare</button>
 		</div>
+		<div class="input-group">
+		<input type="button" value="Home" onclick="window.location.href='index.php'" />
+		</div>
 	</form>
 
 </body>

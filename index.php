@@ -1,4 +1,8 @@
-<?php include('signup-inc.php'); ?>
+<?php 
+	include('signup-inc.php'); 
+	include('comm-inc.php');
+	date_default_timezone_set('Europe/Bucharest');
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -11,7 +15,7 @@
 		
 	</head>
 	<body>
-	
+		
 		<!-- Wrapper -->
 			<div id="wrapper">
 				<!-- Header -->						
@@ -32,12 +36,13 @@
 								<li><a href="#intro">Descriere</a></li>
 								<li><a href="#work">Galerie</a></li>
 								<li><a href="#about">Activități</a></li>
-								<li><a href="#contact">Contact</a></li>
+								<li><a href="#contact">Recenzii</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
 					</header>
 		<div>
+		<br>
 		<input type="button" value="Înregistrare" onclick="window.location.href='inregistrare.php'" />
 		<input type="button" value="Logare" onclick="window.location.href='login.php'" />
 		</div>
@@ -53,7 +58,7 @@
 				</div>
 			<?php endif ?>
 
-			<?php if (isset($_SESSION)): ?>
+			<?php if (isset($_SESSION['uname'])): ?>
 				<p><a href="index.php?logout='1'" style="color: red;">Delogare</a></p>
 			<?php endif ?>
 		</div>
@@ -250,25 +255,29 @@
 
 						<!-- Contact -->
 							<article id="contact">						
-								<h2 class="major">Contact</h2>								
-								<form method="post" action="#">
-									<div class="field half first">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
+								<h2 class="major">Recenzii</h2>								
+								<?php
+								echo "<form method='POST' action='".introComentarii($conn)."'>
+									<input type='hidden' name='user_id' value='Anonymous'>
+									<input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'>
+									<div class='field half first'>
+										<label for='name'>Name</label>
+										<input type='text' name='name' id='name' />
 									</div>
-									<div class="field half">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
+									<div class='field half'>
+										<label for='email'>Email</label>
+										<input type='text' name='email' id='email' />
 									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
+									<div class='field'>
+										<label for='message'>Message</label>
+										<textarea name='message' id='message' rows='4'></textarea>
 									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="special" /></li>
-										<li><input type="reset" value="Reset" /></li>
+									<ul class='actions'>
+										<button type='submit' name='commSubmit'>Comentează</button>
 									</ul>
-								</form>
+								</form>";
+								preiaComentarii($conn);
+								?>
 								<ul class="icons">
 									<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 									<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>

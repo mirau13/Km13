@@ -1549,7 +1549,7 @@
 			#main article {
 				padding: 3rem 1.5rem 0.5rem 1.5rem ;
 			}
-
+			
 		}
 /*.content {
 	width: 30%;
@@ -1635,6 +1635,7 @@
 	line-height: 63px;
 	cursor: pointer;
 }*/
+
 		
 	/*Verificare disponibilitate: Zi-Luna-An*/
 	 <style type="text/css">
@@ -1722,3 +1723,12 @@
 		body.is-loading #footer {
 			opacity: 0;
 		}
+		
+		
+.comentariu {
+	width: 800px;
+	padding: 20px;
+	margin-bottom: 4px;
+	background-color: #fff;
+	border-radius: 4px;
+}
