@@ -75,6 +75,7 @@ if (isset($_POST['submit'])){
 
 	//log user in from login page
 	if (isset ($_POST['login'])) {
+		$user_id = $_POST['user_id'];
 		$uname = mysqli_real_escape_string($conn, $_POST['uname']);
 		$pass = mysqli_real_escape_string($conn, $_POST['pass']);
 		
@@ -103,8 +104,9 @@ if (isset($_POST['submit'])){
 						header('location: login.php');
 					} elseif ($hashedPassCheck == true){
 						//Logare utilizator
-						$_SESSION['uname'] = $uname;
-						$_SESSION['success'] = "Sunteți logat";
+						//$_SESSION['uname'] = $uname;
+						$_SESSION['user_id'] = $row['user_id'];
+						$_SESSION['success'] = "";
 						header('location: index.php');
 					}
 				}
